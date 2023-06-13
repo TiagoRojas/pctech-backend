@@ -3,6 +3,10 @@ const express = require('express');
 const router = express.Router();
 const UserSchema = require('../db/models/userModel');
 
+router.get('/', (req, res) => {
+	res.send('hola');
+});
+
 router.post('/api/register', async (req, res) => {
 	console.log(req.body);
 	try {
