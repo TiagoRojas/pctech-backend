@@ -15,5 +15,4 @@ app.use(cors());
 app.use(loginRoute);
 app.use(productRoute);
 
-app.listen(port);
-console.log('server on port ' + port);
+app.listen(port, '0.0.0.0', () => console.log('server on port ' + port));
