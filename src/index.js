@@ -9,6 +9,7 @@ const loginRoute = require('./routes/userRoute');
 const startDb = require('./db/index');
 
 startDb();
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors());
 app.use(loginRoute);
