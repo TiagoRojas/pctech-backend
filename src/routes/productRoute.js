@@ -32,6 +32,7 @@ router.post('/a', upload.array('pictures', 12), async function (req, res, next) 
 });
 
 router.post('/admin/addProduct', upload.array('pictures', 8), async (req, res) => {
+	res.header('Access-Control-Allow-Origin', '*');
 	const details = await JSON.parse(req.body?.details);
 	const ProductSchema = require('../db/models/productModel');
 	const picturesReq = req.files;
